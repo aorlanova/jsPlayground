@@ -1,0 +1,29 @@
+let strOne = "abaowl";
+let total = 0;
+let store = [];
+
+function findChar(x) {
+
+  for (i = 0; i < x.length; i++) {
+    
+      if (!store.includes(x[i])) {
+    
+        store.push(x[i]);
+
+      } else {
+
+        let lengthChar =  store.length;
+        store = [];
+
+      }
+    
+  }
+
+ 
+
+console.log(store.length);
+
+}
+
+findChar(strOne);
+
