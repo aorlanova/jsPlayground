@@ -4,6 +4,7 @@ let total = 0;
 let store = [];
 let highestTotal = 0;
 let longestStr = [];
+let cat = 0;
 
 function findChar(x) {
 
