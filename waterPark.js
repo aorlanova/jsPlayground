@@ -1,5 +1,5 @@
 
-let testHeight = [0,1,0,2,1,0,1,3,2,1,2,1];
+let testHeight = [4,2,0,3,2,5];
 let height = [4,0,0,1,9,2,3];
 let highestBlock = 0;
 let rainWater = 0;
@@ -11,7 +11,7 @@ function trappedWater (x) {
 
   for (hi = 0; hi < x.length; hi++) {
 
-    totalBlockBefore += x[hi];
+    totalBlockBefore += (x[hi]);
 
   }
 
@@ -47,7 +47,7 @@ function trappedWater (x) {
 
   for (n = 0; n < x.length; n++) {
 
-    totalBlockAfter += x[n];
+    totalBlockAfter += (x[n]);
 
   }
 
