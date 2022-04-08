@@ -1,4 +1,5 @@
 
+let testHeight = [0,1,0,2,1,0,1,3,2,1,2,1];
 let height = [4,0,0,1,9,2,3];
 let highestBlock = 0;
 let rainWater = 0;
@@ -57,4 +58,4 @@ console.log(rainWater);
 
 
 trappedWater(height);
-
+trappedWater(testHeight);
