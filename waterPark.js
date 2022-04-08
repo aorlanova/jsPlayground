@@ -1,6 +1,7 @@
 
 let testHeight = [4,2,0,3,2,5];
 let height = [4,0,0,1,9,2,3];
+let test2 = [0,1,0,2,1,0,1,3,2,1,2,1];
 let highestBlock = 0;
 let rainWater = 0;
 let lowestBlock = 0;
@@ -51,11 +52,17 @@ console.log(totalBlockBefore);
 
   }
 
+
+
 rainWater = (totalBlockAfter - totalBlockBefore);
 console.log(totalBlockAfter);
 console.log("Your total rainwater collected is: " +rainWater);
+
+totalBlockAfter = 0;
+totalBlockBefore = 0;
 
 }
 
 
 trappedWater(testHeight);
+trappedWater(test2);
