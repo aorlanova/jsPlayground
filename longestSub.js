@@ -1,4 +1,4 @@
-
+// program accepts a string object as an argument and returns a string of the longest possible substring that has no repeating characters and the length of that string.
 
 let strOne = "abaowl";
 let strTwo = "aaauwneldhwoeeee";
