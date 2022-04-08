@@ -15,11 +15,11 @@ function trappedWater (x) {
 
   }
 
+console.log(totalBlockBefore);
+
   for (i = 0; i < x.length; i++) {
 
     for (c = i + 2; c < x.length; c++) {
-
-      lowestBlock = 0;
 
       if (x[c] < x[i]) {
 
@@ -52,10 +52,10 @@ function trappedWater (x) {
   }
 
 rainWater = (totalBlockAfter - totalBlockBefore);
-console.log(rainWater);
+console.log(totalBlockAfter);
+console.log("Your total rainwater collected is: " +rainWater);
 
 }
 
 
-trappedWater(height);
 trappedWater(testHeight);
