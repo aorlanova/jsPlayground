@@ -1,3 +1,5 @@
+//Program accepts argument of 2 arrays of intigers, converts each array into a single integer based on index and returns the sum of the two integers.
+
 let partOne = [1,2,3]; 
 let partTwo = [9,0,0,0,0,1];
 let totalOne = 0;
