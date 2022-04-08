@@ -42,6 +42,8 @@ function trappedWater (x) {
 
   }
 
+}
+
   for (n = 0; n < x.length; n++) {
 
     totalBlockAfter += x[n];
