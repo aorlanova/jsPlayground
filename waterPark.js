@@ -10,7 +10,7 @@ function trappedWater (x) {
 
   for (hi = 0; hi <x.length; hi++) {
 
-    totalBlockBefore += hi[i];
+    totalBlockBefore += x[hi];
 
   }
 
@@ -50,7 +50,6 @@ function trappedWater (x) {
 
 rainWater = (totalBlockAfter - totalBlockBefore);
 console.log(rainWater);
-
 
 }
 
