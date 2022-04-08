@@ -8,7 +8,7 @@ let totalBlockAfter = 0;
 
 function trappedWater (x) {
 
-  for (hi = 0; hi <x.length; hi++) {
+  for (hi = 0; hi < x.length; hi++) {
 
     totalBlockBefore += x[hi];
 
@@ -30,7 +30,7 @@ function trappedWater (x) {
 
       }
 
-      for (b = c-1; b < c; b++) {
+      for (b = i+1; b < c; b++) {
 
 	if (x[b] < lowestBlock) {
 
