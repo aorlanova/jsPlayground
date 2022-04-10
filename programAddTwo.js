@@ -1,17 +1,17 @@
-//Program accepts argument of 2 arrays of intigers, converts each array into a single integer based on index and returns the sum of the two integers.
+/* solution to: https://leetcode.com/problems/add-two-numbers/ 
+Program accepts argument of 2 arrays of intigers, converts each array into a single integer based
+on index and returns the sum of the two integers */
 
 let partOne = [1,2,3]; 
 let partTwo = [9,0,0,0,0,1];
 let totalOne = 0;
 let totalTwo = 0;
 
-
 function twoSum(x,y) {
 
   for (let i = 0; i < x.length; i++) {
 
     totalOne += (x[i] * (Math.pow(10,(x.length-(i+1)))));
-
 
   }
 
@@ -21,9 +21,7 @@ function twoSum(x,y) {
 
   }
 
-
 console.log(totalOne + totalTwo);
-
 
 }
 
