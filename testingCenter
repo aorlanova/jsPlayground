@@ -1,0 +1,8 @@
+let dooboo = "yowoeufn"
+
+console.log(dooboo[1]);
+if (dooboo[1].includes("o")) {
+
+console.log("waddup");
+
+}

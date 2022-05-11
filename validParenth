@@ -1,0 +1,45 @@
+let ogString = "{sa}g[33ws](gfr)";
+let indexOfCloser = [];
+let amountOfOpen = 0;
+
+function checkParenth(checkS) {
+
+  console.log(ogString);
+
+  for (i = 0; i < checkS.length; i++) {
+
+    if (((checkS[i].includes("{")) || (checkS[i].includes("[")) || (checkS[i].includes("("))) {
+
+     amountOfOpen += 1;      
+
+      for (j = 0; i < checkS.length; j++) {
+	
+        if (((checkS[i].includes("{")) && (checkS[j].includes("}"))) && !(indexOfCloser.includes(j))) {
+
+	  indexOfCloser.push(j);
+	  
+	} else if (((checkS[i].includes("(")) && (checkS[j].includes(")"))) && !(indexOfCloser.includes(j))) {
+
+	  indexOfCloser.push(j);
+
+	} else if (((check[i].includes("[")) && (checkS[j].includes("]"))) && !(indexOfCloser.[includes(j))) {
+
+	  indexOfCloser.push(j);
+
+	}      
+      }
+    }
+  }
+
+  if (amountOfOpen == (indexOfCloser.length())) {
+
+    console.log("Valid parenth");
+
+  } else {
+
+    console.log("invalid");
+
+  }
+}
+
+checkParenth(ogString);
