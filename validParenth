@@ -22,7 +22,7 @@ function checkParenth(checkS) {
 
 	  indexOfCloser.push(j);
 
-	} else if (((check[i].includes("[")) && (checkS[j].includes("]"))) && !(indexOfCloser.[includes(j))) {
+	} else if (((checkS[i].includes("[")) && (checkS[j].includes("]"))) && !(indexOfCloser.includes(j))) {
 
 	  indexOfCloser.push(j);
 
@@ -31,7 +31,9 @@ function checkParenth(checkS) {
     }
   }
 
-  if (amountOfOpen == (indexOfCloser.length())) {
+  console.log(amountOfOpen);
+
+  if (amountOfOpen == (indexOfCloser.length)) {
 
     console.log("Valid parenth");
 
