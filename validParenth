@@ -1,3 +1,5 @@
+
+
 let ogString = "{sa}g[33ws](gfr)";
 let indexOfCloser = [];
 let amountOfOpen = 0;
@@ -6,23 +8,23 @@ function checkParenth(checkS) {
 
   console.log(ogString);
 
-  for (i = 0; i < checkS.length; i++) {
+  for (let i = 0; i < checkS.length; i++) {
 
-    if (((checkS[i].includes("{")) || (checkS[i].includes("[")) || (checkS[i].includes("("))) {
+    if (checkS[i].includes("{") || checkS[i].includes("[") || checkS[i].includes("(")) {
 
      amountOfOpen += 1;      
 
-      for (j = 0; i < checkS.length; j++) {
+      for (let j = 0; i < checkS.length; j++) {
 	
-        if (((checkS[i].includes("{")) && (checkS[j].includes("}"))) && !(indexOfCloser.includes(j))) {
+        if (checkS[i].includes("{") && checkS[j].includes("}") && !indexOfCloser.includes(j)) {
 
 	  indexOfCloser.push(j);
 	  
-	} else if (((checkS[i].includes("(")) && (checkS[j].includes(")"))) && !(indexOfCloser.includes(j))) {
+	} else if (checkS[i].includes("(") && checkS[j].includes(")") && !indexOfCloser.includes(j)) {
 
 	  indexOfCloser.push(j);
 
-	} else if (((checkS[i].includes("[")) && (checkS[j].includes("]"))) && !(indexOfCloser.includes(j))) {
+	} else if (checkS[i].includes("[") && checkS[j].includes("]") && !indexOfCloser.includes(j)) {
 
 	  indexOfCloser.push(j);
 

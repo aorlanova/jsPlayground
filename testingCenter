@@ -1,7 +1,7 @@
-let dooboo = "yowoeufn"
+let dooboo = "{yowoeufn"
 
 console.log(dooboo[1]);
-if (dooboo[1].includes("o")) {
+if (dooboo[0].includes("{") && dooboo[1].includes("y") && !dooboo.includes("a")) {
 
 console.log("waddup");
 
