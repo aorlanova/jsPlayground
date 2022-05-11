@@ -1,12 +1,10 @@
-
-
 let ogString = "{sa}g[33ws](gfr)";
 let indexOfCloser = [];
 let amountOfOpen = 0;
 
 function checkParenth(checkS) {
 
-  console.log(ogString);
+  console.log("your string is: " + checkS);
 
   for (let i = 0; i < checkS.length; i++) {
 
@@ -14,8 +12,8 @@ function checkParenth(checkS) {
 
      amountOfOpen += 1;      
 
-      for (let j = 0; i < checkS.length; j++) {
-	
+      for (let j = 0; j < checkS.length; j++) {
+
         if (checkS[i].includes("{") && checkS[j].includes("}") && !indexOfCloser.includes(j)) {
 
 	  indexOfCloser.push(j);
@@ -33,9 +31,7 @@ function checkParenth(checkS) {
     }
   }
 
-  console.log(amountOfOpen);
-
-  if (amountOfOpen == (indexOfCloser.length)) {
+  if (amountOfOpen == indexOfCloser.length) {
 
     console.log("Valid parenth");
 
