@@ -2,6 +2,7 @@ let ogString = "{sa}g[33ws](gfr)";
 let indexOfCloser = [];
 let amountOfOpen = 0;
 let t = 0;
+let b = 1;
 
 function checkParenth(checkS) {
 
