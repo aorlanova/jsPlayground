@@ -1,41 +1,28 @@
-let ogString = "{sa}g[33ws](gfr)";
-let indexOfCloser = [];
-let amountOfOpen = 0;
-let t = 0;
-let b = 1;
+let ogString = "{}[](()(){)}";
+let openStorage = [];
+let testSubject = "[{}]{[}]"; //invalid
 
-function checkParenth(checkS) {
+function validParenth(parenth) {
 
-  console.log("your string is: " + checkS);
+  for (i = 0; i<parenth.length; i++) {
 
-  for (let i = 0; i < checkS.length; i++) {
+    if (parenth[i] == "[" || parenth[i] == "{" || parenth[i] == "(") {
 
-    if (checkS[i].includes("{") || checkS[i].includes("[") || checkS[i].includes("(")) {
+      openStorage.push(parenth[i]);
+       
+  } else {
 
-     amountOfOpen += 1;      
+    if ((parenth[i] == ")" && openStorage[i] == "(") ||(parenth[i] == "]" && openStorage[i] == "[") || (parenth[i] == "}" && openStorage[i] == "{")) {
 
-      for (let j = 0; j < checkS.length; j++) {
+      openStorage.pop;
 
-        if (checkS[i].includes("{") && checkS[j].includes("}") && !indexOfCloser.includes(j)) {
-
-	  indexOfCloser.push(j);
-	  
-	} else if (checkS[i].includes("(") && checkS[j].includes(")") && !indexOfCloser.includes(j)) {
-
-	  indexOfCloser.push(j);
-
-	} else if (checkS[i].includes("[") && checkS[j].includes("]") && !indexOfCloser.includes(j)) {
-
-	  indexOfCloser.push(j);
-
-	}      
-      }
     }
   }
+  }
 
-  if (amountOfOpen == indexOfCloser.length) {
+  if (openStorage.length == 0) {
 
-    console.log("Valid parenth");
+    console.log("valid");
 
   } else {
 
@@ -44,4 +31,5 @@ function checkParenth(checkS) {
   }
 }
 
-checkParenth(ogString);
+validParenth(testSubject);
+
