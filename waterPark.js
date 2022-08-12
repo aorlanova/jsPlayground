@@ -58,9 +58,12 @@ function trappedWater (x) {
 
   }
 
+
+  /* rainwater is calculated finding the difference of total blocks
+  before rainfall and after rainfall. */
   rainWater = (totalBlockAfter - totalBlockBefore);
   console.log(totalBlockAfter);
-  console.log("Your total rainwater collected is: " +rainWater);
+  console.log("Your total rainwater collected is: " +rainWater + " square units");
 
   totalBlockAfter = 0;
   totalBlockBefore = 0;

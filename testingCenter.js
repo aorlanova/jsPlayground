@@ -1,33 +1,22 @@
+let digits = [9];
+let plusOne = 0;
 
-let mysteryMap = new Map([
-[1, 69],
-[6, 100], 
-[7,500],
-[2,60],
-[3,80]
-]);
+if (digits[digits.length-1] == 9) {
+  for (let i = 0; i < digits.length; i++) {
 
-let tries = 0;
-let myst = null;
-
-function generate(min, max) {
-
-  for (let i = null; !mysteryMap.has(i); tries++){
-
-    i = Math.floor((Math.random()*(max+1)))+(min);
-    
-    if (mysteryMap.has(i)) {
-
-      myst = i;
-
-    }
+   plusOne += ((digits[i]) * (Math.pow(10, digits.length - i - 1)));  
 
   }
 
-  console.log("the mystery number generated was: " + myst + " and its value is: " + mysteryMap.get(myst));
-  console.log("it only took this many tries to get it: " + tries);
+  plusOne++
+  digits = Array.from(String(plusOne), Number);
+  console.log(digits);
 
+ } else {
 
-}
+   let addLast = (digits[digits.length-1]) + 1;
+   digits.splice((digits.length-1), 1, addLast);
 
-generate(0,100);
+ }
+
+console.log(digits);
