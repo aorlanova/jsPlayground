@@ -11,26 +11,33 @@ let store = [];
 let highestTotal = 0;
 let longestStr = [];
 
+// method finds the longest possible substring with no repeating characters. 
 function findChar(x) {
 
   for (i = 0; i < x.length; i++) {
 
     for (b = i; b < x.length; b++) {
 
+      //checks if array storing non-repeating elements includes current character.
       if (!store.includes(x[b])) {
 
+	//adds non-repeating character to storage array and updates length.
         store.push(x[b]);
 	total = store.length;
 
       } else {
 
+	// a repeating array was found,check if the new total is higher than previous.
 	if (total > highestTotal) {
-
+	
+	  // new total becomes highest total.
           highestTotal = total;
+	  // longestStr is updated to become the storage array.
 	  longestStr = store.toString();
 
 	}
-
+	
+	// store is cleared. Break out of the inner loop.
 	store = [];
 	break;
 

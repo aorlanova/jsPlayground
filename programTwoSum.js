@@ -3,6 +3,7 @@ program accepts a target integer argument and an array of integers.
 The program returns an array of two integers in the array that can add 
 to get the target. */
 
+
 const numArr = [3,1,3,5,8,4,0];
 
 let addTo = function indice(target, listNum) {
